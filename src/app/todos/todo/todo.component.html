@@ -1,10 +1,21 @@
-<button *ngIf="todo.completed === false" (click)="complete()">
+<button
+  *ngIf="todo.completed === false"
+  (click)="complete()"
+  style="cursor: pointer"
+>
   <img src="assets/icons/task_pending.svg" alt="delete" />
 </button>
-<button *ngIf="todo.completed === true" (click)="reopen()">
+<button
+  *ngIf="todo.completed === true"
+  (click)="reopen()"
+  style="cursor: pointer"
+>
   <img src="assets/icons/task_completed.svg" alt="delete" />
 </button>
-<span>{{ todo.description }}</span>
-<button (click)="remove()" class="remove">
+<p>
+  <span class="description">{{ todo.description }}</span>
+  <span *ngIf="todo.completed === true" class="txtCompleted">Completed </span>
+</p>
+<button (click)="remove()" class="remove" style="cursor: pointer">
   <img src="assets/icons/delete.svg" alt="delete" />
 </button>

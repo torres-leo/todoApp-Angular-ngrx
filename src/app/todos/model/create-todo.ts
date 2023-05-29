@@ -11,8 +11,8 @@ export function createTodo(description: string): Todo {
 // Just a plain simple id generator to showcase the app.
 // DO NOT USE IN PROD
 function generateId(): string {
-  return String(Math.round(Date.now() * Math.random() * 9))
-    .replace('1', 'e')
-    .replace('3', 'a')
-    .replace('7', 'c');
+  const random = Math.random().toString(36).substring(2);
+  const date = Date.now().toString(36);
+
+  return random + date;
 }

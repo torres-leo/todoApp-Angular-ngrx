@@ -1,7 +1,7 @@
-:host{
-   display: flex;
-   flex-direction: column;
-   margin: 0 var(--base-separation)
+:host {
+  display: flex;
+  flex-direction: column;
+  margin: 0 var(--base-separation);
 }
 
 h1 {
@@ -11,16 +11,16 @@ h1 {
   font-size: 3rem;
 }
 
-
 .remove-all {
   margin-top: var(--double-separation);
-  background:none;
-  border:none;
+  background: none;
+  border: none;
   text-align: center;
   font-size: 0.975rem;
   color: #7e7e7e;
 
   &:hover {
-    color:#7c2222;
+    color: #7c2222;
+    cursor: pointer;
   }
 }
